@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnimalesTakeliController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/getJugadores',[AnimalesTakeliController::class,'getJugadores']);
+
+Route::get('/vistaParaAjax', function(){
+    return view('prueba');
 });
